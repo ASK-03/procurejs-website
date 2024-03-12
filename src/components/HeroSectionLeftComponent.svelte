@@ -11,7 +11,7 @@
 		>.
 	</p>
 	<div class="mt-[115px]">
-		<Button text="Contact" />
+		<Button text="Contact" link="#contact" />
 	</div>
 	<div class="text-[#E5E5E5] text-[24px] text-nowrap tracking-tight">
 		Let’s talk about what works for you the best!

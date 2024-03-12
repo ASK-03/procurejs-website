@@ -1,5 +1,5 @@
 <script>
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Input, Img } from 'flowbite-svelte';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Img } from 'flowbite-svelte';
 	import Button from './Button.svelte';
 	import logo from '../static/procurejs-logo.png';
 
@@ -11,7 +11,7 @@
 		<Img src={logo} alt="Procure J S Logo" class="me-3 h-[4.5rem] sm:h-100 rounded-lg" />
 	</NavBrand>
 	<div class="flex md:order-2">
-		<Button text="Contact" />
+		<Button text="Contact" link="#contact" />
 		<NavHamburger class="text-[#fff]" />
 		<!-- TODO: Hamburger icon problems in dropdown menu too -->
 	</div>

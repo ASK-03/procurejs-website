@@ -1,6 +1,6 @@
 <script>
 	import { Img } from 'flowbite-svelte';
-	import heroSectionImage from '../static/hero-section-image.jpeg';
+	import heroSectionImage from '../static/hero-section-image-min.jpeg';
 </script>
 
 <div class="img">
