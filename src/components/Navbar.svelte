@@ -1,22 +1,24 @@
 <script>
-	import logo from '../static/procurejs-logo.png';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Input, Img } from 'flowbite-svelte';
 	import Button from './Button.svelte';
+	import logo from '../static/procurejs-logo.png';
+
+	let navLiStyle = 'text-[#e5e5e5] font-montserrat text-[18px] hover:text-[#6557f1]';
 </script>
 
-<nav class="navbar mx-[162px] mb-[32px] h-[78px] flex align-center justify-between">
-	<div class="logo h-[189px] w-[113px]">
-		<img src={logo} alt="Logo" />
-	</div>
-	<div class="menu flex align-middle justify-center items-center">
-		<ul
-			class="flex flex-row align-center justify-center gap-[42px] text-[#e5e5e5] font-light tracking-tighter"
-		>
-			<li><a href="/">Home</a></li>
-			<li><a href="/service">Service</a></li>
-			<li><a href="/about">About</a></li>
-		</ul>
-	</div>
-	<div class="contact-btn flex flex-col align-middle justify-center items-center">
+<Navbar class="bg-transparent">
+	<NavBrand href="/">
+		<Img src={logo} alt="Procure J S Logo" class="me-3 h-[4.5rem] sm:h-100 rounded-lg" />
+	</NavBrand>
+	<div class="flex md:order-2">
 		<Button text="Contact" />
+		<NavHamburger class="text-[#fff]" />
+		<!-- TODO: Hamburger icon problems in dropdown menu too -->
 	</div>
-</nav>
+	<NavUl class="order-1">
+		<NavLi class={navLiStyle} href="/" active={true}>Home</NavLi>
+		<NavLi class={navLiStyle} href="#services">Service</NavLi>
+		<NavLi class={navLiStyle} href="#about">About</NavLi>
+		<!-- TODO: Think if we have to add more like product and all -->
+	</NavUl>
+</Navbar>

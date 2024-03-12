@@ -8,7 +8,8 @@
 	<div class="navbar pt-[32px]">
 		<Navbar />
 	</div>
-	<div class="content">
+	<div class="content mx-[162px] mt-[144px] flex flex-row align-middle items-start justify-between">
+		<!-- TODO: This is component is not responsive -->
 		<div class="left">
 			<HeroSectionLeftComponent />
 		</div>
