@@ -1,10 +1,14 @@
+// const defaultTheme = require('tailwindcss/defaultTheme');
+// const colors = require('tailwindcss/colors');
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+
 const config = {
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
 		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
 	],
 
-	plugins: [require('flowbite/plugin')],
+	plugins: [require('flowbite/plugin'), addVariablesForColors],
 
 	darkMode: 'class',
 
@@ -28,9 +32,34 @@ const config = {
 					800: '#6b21a8',
 					900: '#581c87'
 				}
+			},
+			animation: {
+				// ...other animations
+				scroll:
+					'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
+			},
+			keyframes: {
+				// ... other keyframes
+				scroll: {
+					to: {
+						transform: 'translate(calc(-50% - 0.5rem))'
+					}
+				}
 			}
 		}
 	}
 };
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }) {
+	let allColors = flattenColorPalette(theme('colors'));
+	let newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+
+	addBase({
+		':root': newVars
+	});
+}
 
 module.exports = config;

@@ -13,7 +13,7 @@
 {#if animate}
 	<h1
 		class="main-heading text-[64px] text-[#fff] leading-[64px] font-semibold mb-[24px]"
-		transition:fly={{ y: 20, duration: 1000, easing: backOut }}
+		transition:fly={{ y: 50, duration: 2000, easing: backOut }}
 	>
 		{#each lines as line, i}
 			{#if i % 2 == 1}

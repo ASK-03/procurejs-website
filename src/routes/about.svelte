@@ -1,7 +1,7 @@
 <script>
-	import Heading from '../components/Heading.svelte';
-	import AboutCard from '../components/AboutCard.svelte';
-	import founder from '../static/founder.jpeg';
+	import Heading from '@/components/Heading.svelte';
+	import AboutCard from '@/components/AboutCard.svelte';
+	import founder from '@/static/founder.jpeg';
 
 	let spec = {
 		src: founder,
@@ -12,10 +12,17 @@
 	};
 </script>
 
-<section class="about h-[100vh] w-[100%] bg-[#E5E5E5] px-[162px] py-[48px]" id="about">
+<!-- bg-[#E5E5E5] -->
+<section class="about h-[100vh] w-[100%] px-[162px] py-[48px]" id="about">
 	<Heading display="left" heading="About" subHeading="Know Us Better!" />
 	<div class="about-card mt-[6rem] flex flex-col">
 		<AboutCard {spec} />
 		<AboutCard {spec} reverse={true} />
 	</div>
 </section>
+
+<style>
+	/* .about {
+		background-image: linear-gradient(to top, #658f9d, #8da6b6, #b3becb, #d6d8e0, #f4f4f4);
+	} */
+</style>

@@ -28,7 +28,7 @@
 		: 'left flex flex-col gap-3';
 </script>
 
-<div class={style}>
+<div class={`${style}`}>
 	<Img {src} alt="Picture" class="rounded-[50%] h-[15rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]" />
 	<div class={alignment}>
 		<div class="heading text-black text-[2rem] font-semibold flex flex-col">

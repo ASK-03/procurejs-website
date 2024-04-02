@@ -8,3 +8,20 @@
     box-sizing: border-box;
     font-family: montserrat, sans-serif;
 }
+
+body {
+    overflow-x: hidden;
+    background-image: radial-gradient(circle at 75% 50%,
+            #2158b1,
+            #2154a2,
+            #234f94,
+            #254b85,
+            #274677,
+            #26426f,
+            #263f67,
+            #253b5f,
+            #21375b,
+            #1d3358,
+            #193054,
+            #152c51);
+}

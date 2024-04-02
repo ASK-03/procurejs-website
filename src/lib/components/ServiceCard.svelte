@@ -1,9 +1,9 @@
 <script>
 	import { Card } from 'flowbite-svelte';
-	import globe from '../static/globe.svg';
-	import puzzle from '../static/puzzle.svg';
-	import network from '../static/network.svg';
-	import shield from '../static/shield.svg';
+	import globe from '@/static/globe.svg';
+	import puzzle from '@/static/puzzle.svg';
+	import network from '@/static/network.svg';
+	import shield from '@/static/shield.svg';
 
 	const headingText = {
 		globe: 'Expertise Across Industries',

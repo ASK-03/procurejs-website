@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import Loading from './loading.svelte';
+	import Loader from '@/components/Loader.svelte';
 	import '../app.css';
 
 	let isLoading = true;
@@ -11,7 +11,7 @@
 </script>
 
 {#if isLoading}
-	<Loading />
+	<Loader />
 {:else}
 	<slot />
 {/if}
