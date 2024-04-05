@@ -10,8 +10,8 @@
 		visible: (i: number) => ({
 			opacity: 1,
 			transition: {
-				delay: i * 0.1,
-				duration: 0.5
+				delay: i * 0.2,
+				duration: 0.8
 			}
 		}),
 		hidden: { opacity: 0 }
@@ -42,7 +42,5 @@
 				</div>
 			</Motion>
 		</div>
-	{:else}
-		<div></div>
 	{/if}
 </div>

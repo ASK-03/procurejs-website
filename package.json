@@ -20,7 +20,6 @@
 		"eslint-plugin-svelte": "^2.35.1",
 		"flowbite": "^2.3.0",
 		"flowbite-svelte": "^0.44.24",
-		"flowbite-svelte-icons": "^1.4.3",
 		"postcss": "^8.4.35",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
@@ -31,6 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"clsx": "^2.1.0",
+		"flowbite-svelte-icons": "^1.5.0",
 		"motion": "^10.17.0",
 		"svelte-inview": "^4.0.2",
 		"svelte-motion": "^0.12.2",

@@ -3,6 +3,9 @@
 	import { Card, Button, Label, Input, Textarea, Alert } from 'flowbite-svelte';
 	import { InfoCircleSolid } from 'flowbite-svelte-icons';
 	import contactUsImage from '@/static/contact.svg';
+
+	import { inview } from 'svelte-inview';
+
 	let textareaprops = {
 		id: 'message',
 		name: 'message',
@@ -32,50 +35,65 @@
 			status = result.message || 'Success';
 		}
 	};
+
+	let isInView;
+	const options = {
+		rootMargin: '100px',
+		unobserveOnEnter: true
+	};
+	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
 <section class="contact h-[100vh] w-[100%] px-[162px] py-[48px]" id="contact">
-	<Heading display="left" heading="Contact" subHeading="Get in Touch" />
+	<div use:inview={options} on:inview_change={handleChange}>
+		{#if isInView}
+			<Heading display="left" heading="Contact" subHeading="Get in Touch" />
 
-	{#if status}
-		<div class="absolute inset-x-[162px]">
-			<Alert color="green" class="mt-10" dismissable>
-				<InfoCircleSolid slot="icon" class="w-4 h-4" />
-				<span class="font-medium">Success alert!</span>
-				Change a few things up and try submitting again.
-			</Alert>
-		</div>
-	{/if}
+			{#if status}
+				<div class="absolute inset-x-[162px]">
+					<Alert color="green" class="mt-10" dismissable>
+						<InfoCircleSolid slot="icon" class="w-4 h-4" />
+						<span class="font-medium">Success alert!</span>
+						Change a few things up and try submitting again.
+					</Alert>
+				</div>
+			{/if}
 
-	<div
-		class="contact-form mt-[6rem] flex flex-row justify-between align-bottom items-center gap-20 px-20 py-10 bg-white/20 backdrop-blur-3xl rounded-lg"
-	>
-		<Card size="lg" color="none" border={false} shadow={false}>
-			<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
-				<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
-				<div>
-					<Label for="name" class="block mb-2 text-xl font-medium text-white/90">Name</Label>
-					<Input id="name" type="text" name="name" placeholder="Name" required />
-				</div>
-				<Label class="space-y-2 text-xl font-medium text-white/90">
-					<span>Email</span>
-					<Input type="email" name="email" placeholder="name@company.com" required />
-				</Label>
-				<div class="mb-6">
-					<Label for="subject" class="block mb-2 text-xl font-medium text-white/90">Subject</Label>
-					<Input id="subject" name="_subject" placeholder="Subject" required />
-				</div>
-				<div>
-					<Label for="message" class="block mb-2 text-xl font-medium text-white/90">Message</Label>
-					<Textarea {...textareaprops} />
-				</div>
-				<Button type="submit" class="w-full">Send</Button>
-			</form>
-		</Card>
+			<div
+				class="contact-form mt-[6rem] flex flex-row justify-between align-bottom items-center gap-20 px-20 py-10 bg-white/20 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20"
+			>
+				<Card size="lg" color="none" border={false} shadow={false}>
+					<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
+						<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
+						<div>
+							<Label for="name" class="block mb-2 text-xl font-medium text-white/90">Name</Label>
+							<Input id="name" type="text" name="name" placeholder="Name" required />
+						</div>
+						<Label class="space-y-2 text-xl font-medium text-white/90">
+							<span>Email</span>
+							<Input type="email" name="email" placeholder="name@company.com" required />
+						</Label>
+						<div class="mb-6">
+							<Label for="subject" class="block mb-2 text-xl font-medium text-white/90"
+								>Subject</Label
+							>
+							<Input id="subject" name="_subject" placeholder="Subject" required />
+						</div>
+						<div>
+							<Label for="message" class="block mb-2 text-xl font-medium text-white/90"
+								>Message</Label
+							>
+							<Textarea {...textareaprops} />
+						</div>
+						<Button type="submit" class="w-full">Send</Button>
+					</form>
+				</Card>
 
-		<div class="contact-us-image">
-			<img src={contactUsImage} alt="contact us illustration" />
-		</div>
+				<div class="contact-us-image">
+					<img src={contactUsImage} alt="contact us illustration" />
+				</div>
+			</div>
+		{/if}
 	</div>
 </section>
 

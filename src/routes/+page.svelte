@@ -5,7 +5,7 @@
 	import Products from './products.svelte';
 	import About from './about.svelte';
 	import Benefits from './benefits.svelte';
-	import Faq from './faq.svelte';
+	// import Faq from './faq.svelte';
 	import Contact from './contact.svelte';
 </script>
 
@@ -15,7 +15,7 @@
 	<Benefits />
 	<Products />
 	<About />
-	<Faq />
+	<!-- <Faq /> -->
 	<Contact />
 	<Footer />
 </main>

@@ -2,6 +2,8 @@
 	import HeroParallax from '@/components/ui/HeroParallax/HeroParallax.svelte';
 	import Heading from '@/components/Heading.svelte';
 
+	import { inview } from 'svelte-inview';
+
 	import FurnitureImage from '@/static/couch.jpg';
 	import FashionAcessoriesImage from '@/static/fashion-acessories.jpg';
 	import DecorImage from '@/static/decor.jpg';
@@ -94,10 +96,18 @@
 			thumbnail: GardenProductsImage
 		}
 	];
+
+	let isInView;
+	const options = {
+		rootMargin: '190px',
+		unobserveOnEnter: true
+	};
+
+	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
 <!-- bg-[#2A4064] -->
-<section class="products h-fit w-[100vw] py-[48px]" id="prodcuts">
+<section class="products h-fit w-[100vw] py-[48px]" id="products">
 	<Heading
 		display="left"
 		heading="Products"
@@ -106,7 +116,11 @@
 		subHeadingColor="#e5e5e5"
 		className="px-[162px]"
 	/>
-	<div class="mt-32 w-[100vw] overflow-hidden">
-		<HeroParallax {products} />
+	<div use:inview={options} on:inview_change={handleChange}>
+		{#if isInView}
+			<div class="mt-32 w-[100vw] overflow-hidden">
+				<HeroParallax {products} />
+			</div>
+		{/if}
 	</div>
 </section>

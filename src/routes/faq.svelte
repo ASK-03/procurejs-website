@@ -41,7 +41,7 @@
 	<Heading
 		display="middle"
 		heading="Testimonials"
-		subHeading="What Our Customers Say"
+		subHeading="What People Say"
 		className="mt-[10rem]"
 	/>
 
