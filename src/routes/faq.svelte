@@ -1,8 +1,5 @@
 <script>
-	import { AccordionItem, Accordion } from 'flowbite-svelte';
 	import Heading from '@/components/Heading.svelte';
-
-	// import downArrow from '@/static/downArrow.svg';
 	import InfiniteMovingCards from '@/components/ui/InfiniteMovingCards/InfiniteMovingCards.svelte';
 
 	const testimonials = [
@@ -40,98 +37,6 @@
 
 <section class="faq h-fit w-[100%] px-[162px] py-[48px] relative flex flex-col">
 	<Heading display="middle" heading="FAQ" subHeading="Frequently Asked Questions" />
-	<div class="contact-form mt-[6rem]">
-		<Accordion>
-			<AccordionItem class="bg-[#e5e5e5]">
-				<span slot="header">My Header 1</span>
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint
-					explicabo ...
-				</p>
-				<p class="text-gray-500 dark:text-gray-400">
-					Check out this guide to learn how to <a
-						href="/"
-						target="_blank"
-						rel="noreferrer"
-						class="text-blue-600 dark:text-blue-500 hover:underline"
-					>
-						get started
-					</a>
-					and start developing websites even faster with components on top of Tailwind CSS.
-				</p>
-			</AccordionItem>
-			<AccordionItem class="bg-[#e5e5e5]">
-				<span slot="header">My Header 2</span>
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint
-					explicabo ...
-				</p>
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint
-					explicabo ...
-				</p>
-				<p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-				<ul class="list-disc ps-5 dark:text-gray-400 text-gray-500">
-					<li>
-						<a
-							href="/"
-							target="_blank"
-							rel="noreferrer"
-							class="text-blue-600 dark:text-blue-500 hover:underline"
-						>
-							Lorem ipsum
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://tailwindui.com/"
-							rel="noreferrer"
-							target="_blank"
-							class="text-blue-600 dark:text-blue-500 hover:underline"
-						>
-							Tailwind UI
-						</a>
-					</li>
-				</ul>
-			</AccordionItem>
-			<AccordionItem class="bg-[#e5e5e5]">
-				<span slot="header">My Header 1</span>
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint
-					explicabo ...
-				</p>
-				<p class="text-gray-500 dark:text-gray-400">
-					Check out this guide to learn how to <a
-						href="/"
-						target="_blank"
-						rel="noreferrer"
-						class="text-blue-600 dark:text-blue-500 hover:underline"
-					>
-						get started
-					</a>
-					and start developing websites even faster with components on top of Tailwind CSS.
-				</p>
-			</AccordionItem>
-			<AccordionItem class="bg-[#e5e5e5]">
-				<span slot="header">My Header 1</span>
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint
-					explicabo ...
-				</p>
-				<p class="text-gray-500 dark:text-gray-400">
-					Check out this guide to learn how to <a
-						href="/"
-						target="_blank"
-						rel="noreferrer"
-						class="text-blue-600 dark:text-blue-500 hover:underline"
-					>
-						get started
-					</a>
-					and start developing websites even faster with components on top of Tailwind CSS.
-				</p>
-			</AccordionItem>
-		</Accordion>
-	</div>
 
 	<Heading
 		display="middle"
@@ -148,14 +53,5 @@
 
 	<div
 		class="absolute bottom-[5rem] left-[50%] translate-x-[-50%] flex flex-col align-middle items-center justify-between"
-	>
-		<!-- <p class="font-bold text-[#E5E5E5] text-[32px]">Feel Free to Contact Us</p> -->
-	</div>
+	></div>
 </section>
-
-<style>
-	/* .faq {
-		background-image: linear-gradient(to bottom, #658f9d, #4d7c93, #3a6988, #2c557d, #26416f);
-	} */
-	/* background-image: linear-gradient(to bottom, #658f9d, #3c7895, #0e5f8d, #004682, #002b71); */
-</style>

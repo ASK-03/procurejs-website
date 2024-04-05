@@ -9,9 +9,9 @@
 </script>
 
 <!-- bg-[#2A4064] -->
-<div class="footer flex items-center justify-center align-middle py-10">
+<div class="footer flex items-center justify-center align-middle px-20 py-10">
 	<Footer
-		class="h-[30vh] w-[80vw] flex flex-row items-center align-middle justify-center bg-white/10 backdrop-blur-xl rounded-lg"
+		class="h-[30vh] w-[82vw] flex flex-row items-center align-middle justify-center bg-white/10 backdrop-blur-3xl rounded-lg"
 		footerType="socialmedia"
 	>
 		<div class="md:mx-[112px] md:flex md:justify-around md:align-middle md:items-center">

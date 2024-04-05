@@ -46,7 +46,11 @@ const config = {
 					}
 				}
 			}
-		}
+		},
+		plugins: [
+			// ...other plugins
+			addVariablesForColors
+		]
 	}
 };
 

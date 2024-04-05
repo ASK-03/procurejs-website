@@ -1,6 +1,7 @@
 <script>
 	import Heading from '@/components/Heading.svelte';
-	import { Card, Button, Label, Input, Textarea } from 'flowbite-svelte';
+	import { Card, Button, Label, Input, Textarea, Alert } from 'flowbite-svelte';
+	import { InfoCircleSolid } from 'flowbite-svelte-icons';
 	import contactUsImage from '@/static/contact.svg';
 	let textareaprops = {
 		id: 'message',
@@ -9,35 +10,69 @@
 		rows: 4,
 		placeholder: 'Write your message here!'
 	};
+
+	let status = '';
+	const handleSubmit = async (data) => {
+		status = 'Submitting...';
+		const formData = new FormData(data.currentTarget);
+		const object = Object.fromEntries(formData);
+		const json = JSON.stringify(object);
+
+		const response = await fetch('https://api.web3forms.com/submit', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: json
+		});
+		const result = await response.json();
+		if (result.success) {
+			console.log(result);
+			status = result.message || 'Success';
+		}
+	};
 </script>
 
 <section class="contact h-[100vh] w-[100%] px-[162px] py-[48px]" id="contact">
 	<Heading display="left" heading="Contact" subHeading="Get in Touch" />
+
+	{#if status}
+		<div class="absolute inset-x-[162px]">
+			<Alert color="green" class="mt-10" dismissable>
+				<InfoCircleSolid slot="icon" class="w-4 h-4" />
+				<span class="font-medium">Success alert!</span>
+				Change a few things up and try submitting again.
+			</Alert>
+		</div>
+	{/if}
+
 	<div
-		class="contact-form mt-[6rem] flex flex-row justify-between align-bottom items-center gap-20"
+		class="contact-form mt-[6rem] flex flex-row justify-between align-bottom items-center gap-20 px-20 py-10 bg-white/20 backdrop-blur-3xl rounded-lg"
 	>
 		<Card size="lg" color="none" border={false} shadow={false}>
-			<form class="flex flex-col space-y-6" action="/">
-				<!-- <h1 class="text-[2rem] font-medium text-gray-900 dark:text-white">Talk to Us!</h1> -->
+			<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
+				<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
 				<div>
-					<Label for="name" class="block mb-2">Name</Label>
-					<Input id="name" placeholder="Name" required />
+					<Label for="name" class="block mb-2 text-xl font-medium text-white/90">Name</Label>
+					<Input id="name" type="text" name="name" placeholder="Name" required />
 				</div>
-				<Label class="space-y-2">
+				<Label class="space-y-2 text-xl font-medium text-white/90">
 					<span>Email</span>
 					<Input type="email" name="email" placeholder="name@company.com" required />
 				</Label>
 				<div class="mb-6">
-					<Label for="subject" class="block mb-2">Subject</Label>
-					<Input id="subject" placeholder="Subject" required />
+					<Label for="subject" class="block mb-2 text-xl font-medium text-white/90">Subject</Label>
+					<Input id="subject" name="_subject" placeholder="Subject" required />
 				</div>
 				<div>
-					<Label for="message" class="block mb-2">Message</Label>
+					<Label for="message" class="block mb-2 text-xl font-medium text-white/90">Message</Label>
 					<Textarea {...textareaprops} />
 				</div>
 				<Button type="submit" class="w-full">Send</Button>
 			</form>
 		</Card>
+
 		<div class="contact-us-image">
 			<img src={contactUsImage} alt="contact us illustration" />
 		</div>

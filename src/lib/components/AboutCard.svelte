@@ -3,6 +3,8 @@
 	export let spec;
 	export let reverse = false;
 
+	import { inview } from 'svelte-inview';
+
 	let src;
 	let designation;
 	let subHeading;
@@ -26,20 +28,32 @@
 	let alignment = reverse
 		? 'left flex flex-col gap-3 text-right items-end'
 		: 'left flex flex-col gap-3';
+
+	let isInView;
+	const options = {
+		rootMargin: '50px',
+		unobserveOnEnter: true
+	};
+
+	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
-<div class={`${style}`}>
-	<Img {src} alt="Picture" class="rounded-[50%] h-[15rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]" />
-	<div class={alignment}>
-		<div class="heading text-black text-[2rem] font-semibold flex flex-col">
-			<span class="mb-[-1rem]">Meet Our</span>
-			<span class="text-[#346474] text-[3rem] font-bold">{designation}</span>
+<div use:inview={options} on:inview_change={handleChange}>
+	{#if isInView}
+		<div class={`${style} px-20 py-10 bg-white/20 backdrop-blur-3xl rounded-3xl`}>
+			<Img {src} alt="Picture" class="rounded-[50%] h-[15rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]" />
+			<div class={alignment}>
+				<div class="heading text-white/70 text-[2rem] font-semibold flex flex-col">
+					<span class="mb-[-1rem]">Meet Our</span>
+					<span class="text-[#133541]/90 text-[3rem] font-bold">{designation}</span>
+				</div>
+				<div class="subheading text-white/70">
+					{subHeading}
+				</div>
+				<div class="content w-[80%] text-white/70">
+					{content}
+				</div>
+			</div>
 		</div>
-		<div class="subheading">
-			{subHeading}
-		</div>
-		<div class="content w-[80%]">
-			{content}
-		</div>
-	</div>
+	{/if}
 </div>

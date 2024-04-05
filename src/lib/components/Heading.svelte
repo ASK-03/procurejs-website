@@ -4,8 +4,8 @@
 	export let display = 'left';
 	export let heading = 'Hello World';
 	export let subHeading = 'sub';
-	export let headingColor = 'black';
-	export let subHeadingColor = 'black';
+	export let headingColor = '#E5E5E5';
+	export let subHeadingColor = '#E5E5E5';
 	export let className = '';
 
 	let headingStyle;

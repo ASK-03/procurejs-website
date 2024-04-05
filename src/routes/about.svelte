@@ -13,7 +13,7 @@
 </script>
 
 <!-- bg-[#E5E5E5] -->
-<section class="about h-[100vh] w-[100%] px-[162px] py-[48px]" id="about">
+<section class="about h-fit w-[100%] px-[162px] py-[48px]" id="about">
 	<Heading display="left" heading="About" subHeading="Know Us Better!" />
 	<div class="about-card mt-[6rem] flex flex-col">
 		<AboutCard {spec} />
