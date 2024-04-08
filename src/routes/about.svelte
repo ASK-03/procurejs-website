@@ -49,14 +49,14 @@
 	// our commitment to customization means that every client receives tailored solutions that meet their exact needs with precision and care.
 </script>
 
-<section class="about h-fit w-[100%] px-[162px] py-[48px]" id="about">
+<section class="about h-fit w-[100%] px-[20px] md:px-[162px] pt-[48px] pb-[32px]" id="about">
 	<Heading display="left" heading="About" subHeading="Know Us Better!" />
 	<div class="about-card mt-[6rem] flex flex-col">
 		<AboutCard spec={FounderInfo} />
 		<AboutCard spec={CTOInfo} reverse={true} />
 	</div>
 
-	<div class="grid grid-cols-4 gap-10">
+	<div class="grid md:grid-cols-4 gap-4 md:gap-10">
 		{#each benefits as benefit, index (`benefit-${index}`)}
 			<div
 				class="card h-auto w-auto p-12 rounded-lg bg-white/15 backdrop-blur-md shadow-2xl shadow-blue-500/20"

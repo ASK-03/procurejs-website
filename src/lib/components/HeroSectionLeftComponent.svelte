@@ -4,15 +4,17 @@
 	let lines = ['Beyond', 'Sourcing.', 'Beyond', 'Expectations'];
 </script>
 
-<div class="flex flex-col gap-4 w-[454px] mr-[50px]">
-	<AnimateHeading {lines} />
-	<p class="text-[#E5E5E5] text-[24px] tracking-normal">
+<div class="flex flex-col gap-4 md:w-[454px]">
+	<div class="mb-[16px] md:mb-[24px]">
+		<AnimateHeading {lines} />
+	</div>
+	<p class="text-[#E5E5E5] text-[18px] sm:text-[24px] tracking-normal">
 		Unleash India's Power. Source Smarter, Save More with Procure.
 	</p>
-	<div class="mt-[115px]">
+	<div class="mx-auto sm:mx-0 mt-10 md:mt-[115px]">
 		<Button text="Contact" link="#contact" />
 	</div>
-	<div class="text-[#E5E5E5] text-[24px] text-nowrap tracking-tight">
+	<div class="text-[#E5E5E5] text-[18px] md:text-[24px] md:text-nowrap tracking-tight">
 		Let’s talk about what works for you the best!
 	</div>
 </div>

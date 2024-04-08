@@ -8,6 +8,6 @@
 	<Img
 		src={heroSectionImage}
 		alt="A hand with a magnifying glass looking at India in globe"
-		class="rounded-lg h-[60vh] -translate-y-20"
+		class="rounded-lg min-h-[370px] min-w-[370px] sm:h-[50vh] md:h-[60vh] md:-translate-y-20 mx-auto opacity-5 md:opacity-100"
 	/>
 </div>

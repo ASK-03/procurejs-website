@@ -44,25 +44,27 @@
 	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
-<section class="contact h-[100vh] w-[100%] px-[162px] py-[48px]" id="contact">
+<section
+	class="contact h-fit md:h-screen md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[162px] pt-[48px] pb-[32px]"
+	id="contact"
+>
 	<div use:inview={options} on:inview_change={handleChange}>
 		{#if isInView}
 			<Heading display="left" heading="Contact" subHeading="Get in Touch" />
 
 			{#if status}
-				<div class="absolute inset-x-[162px]">
+				<div class="absolute md:inset-x-[162px]">
 					<Alert color="green" class="mt-10" dismissable>
 						<InfoCircleSolid slot="icon" class="w-4 h-4" />
-						<span class="font-medium">Success alert!</span>
-						Change a few things up and try submitting again.
+						<span class="font-medium">We Will Reach Out To You, Shortly!</span>
 					</Alert>
 				</div>
 			{/if}
 
 			<div
-				class="contact-form mt-[6rem] flex flex-row justify-between align-bottom items-center gap-20 px-20 py-10 bg-white/20 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20"
+				class="contact-form mt-[6rem] flex flex-col md:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20"
 			>
-				<Card size="lg" color="none" border={false} shadow={false}>
+				<div class="w-full md:w-[50%]">
 					<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
 						<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
 						<div>
@@ -87,9 +89,9 @@
 						</div>
 						<Button type="submit" class="w-full">Send</Button>
 					</form>
-				</Card>
+				</div>
 
-				<div class="contact-us-image">
+				<div class="contact-us-image h-0 w-0 hidden md:block md:h-fit md:w-fit">
 					<img src={contactUsImage} alt="contact us illustration" />
 				</div>
 			</div>

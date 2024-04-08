@@ -6,46 +6,28 @@
 	import Button from '@/components/Button.svelte';
 </script>
 
-<section class="hero-section h-[100vh] w-[100%]">
-	<div class="absolute inset-x-[162px] top-[3rem]">
-		<img src={logo} alt="" class="h-[4.5rem] sm:h-100" />
+<section
+	class="hero-section h-fit md:h-screen md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[120px] lg:px-[162px] pb-[32px]"
+>
+	<div class="relative md:mt-[3rem] flex align-middle items-center justify-between">
+		<div class="">
+			<img src={logo} alt="" class="h-[4.5rem] sm:h-100" />
+		</div>
+		<div class="hidden xl:block">
+			<Button text="Contact" link="#contact" />
+		</div>
 	</div>
-	<div class="absolute right-[162px] top-[3rem]">
-		<Button text="Contact" link="#contact" />
-	</div>
-	<div class="navbar pt-[32px]">
+	<div class="navbar mt-[32px]">
 		<Navbar />
 	</div>
-	<div class="content mx-[162px] mt-[25vh] flex flex-row align-middle items-center justify-between">
-		<!-- TODO: This is component is not responsive -->
+	<div
+		class="content mt-[5vh] md:mt-[10vh] md:flex md:gap-4 sm:flex-row md:align-middle md:items-center md:justify-between"
+	>
 		<div class="left">
 			<HeroSectionLeftComponent />
 		</div>
-		<div class="right">
+		<div class="right hidden h-0 w-0 md:block md:h-fit md:w-fit">
 			<HeroSectionRightComponent />
 		</div>
 	</div>
 </section>
-
-<style>
-	section {
-		scroll-snap-align: start;
-	}
-	/* .hero-section {
-		background-image: radial-gradient(
-			circle at 75% 50%,
-			#2158b1,
-			#2154a2,
-			#234f94,
-			#254b85,
-			#274677,
-			#26426f,
-			#263f67,
-			#253b5f,
-			#21375b,
-			#1d3358,
-			#193054,
-			#152c51
-		);
-	} */
-</style>

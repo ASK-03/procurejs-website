@@ -75,12 +75,14 @@
 	];
 </script>
 
-<!-- bg-[#DDDDDD] -->
-<section class="service h-fit w-[100%] px-[162px] py-[48px]" id="services">
+<section
+	class="service h-fit md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[162px] pt-[48px] pb-[32px]"
+	id="services"
+>
 	<Heading display="left" heading="Service" subHeading="Served with Love" />
-	<div class="mt-32 flex flex-col align-middle items-center justify-center">
+	<div class="mt-[6rem] flex flex-col align-middle items-center justify-center">
 		{#each dummyContent as item, index (`content-${index}`)}
-			<div class="mb-[12vh] flex flex-col align-middle items-center justify-center">
+			<div class="mb-[6vh] flex flex-col align-middle items-center justify-center">
 				<h2 class="mb-4 w-fit rounded-full bg-white/80 px-4 py-1 text-sm">
 					{item.badge}
 				</h2>
@@ -88,7 +90,7 @@
 					{item.title}
 				</h1>
 				{#if item?.image}
-					<div class="h-[50vh] w-[40vw]">
+					<div class="md:h-[50vh] md:w-[40vw]">
 						<DirectionAwareHover imageUrl={item.image}>
 							{@html item.description}
 						</DirectionAwareHover>

@@ -107,14 +107,14 @@
 </script>
 
 <!-- bg-[#2A4064] -->
-<section class="products h-fit w-[100vw] py-[48px]" id="products">
+<section class="products h-fit md:w-[100%] sm:w-[calc(100dvh)] pt-[48px] pb-[32px]" id="products">
 	<Heading
 		display="left"
 		heading="Products"
 		subHeading="Some Catchy Line"
 		headingColor="#e5e5e5"
 		subHeadingColor="#e5e5e5"
-		className="px-[162px]"
+		className="px-[20px] md:px-[162px]"
 	/>
 	<div use:inview={options} on:inview_change={handleChange}>
 		{#if isInView}

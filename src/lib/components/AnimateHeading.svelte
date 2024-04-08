@@ -12,7 +12,7 @@
 
 {#if animate}
 	<h1
-		class="main-heading text-[64px] text-[#fff] leading-[64px] font-semibold mb-[24px]"
+		class="main-heading text-[48px] md:text-[64px] text-[#fff] leading-[48px] md:leading-[64px] font-semibold"
 		transition:fly={{ y: 50, duration: 2000, easing: backOut }}
 	>
 		{#each lines as line, i}

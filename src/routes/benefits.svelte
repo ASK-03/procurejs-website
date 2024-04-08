@@ -44,13 +44,13 @@
 	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
-<section class="benefits h-fit w-[100%] px-[162px] py-[48px] snap-start">
+<section class="benefits h-fit w-[100%] px-[20px] md:px-[162px] pt-[48px] pb-[32px] snap-start">
 	<Heading display="right" heading="Benefits" subHeading="Why Choose Us?" />
 
 	<div use:inview={options} on:inview_change={handleChange}>
 		{#if isInView}
-			<div class="mt-32">
-				<div class="grid grid-cols-4 gap-10">
+			<div class="mt-[6rem]">
+				<div class="grid md:grid-cols-4 gap-4 md:gap-10">
 					{#each benefits as benefit, index (`benefit-${index}`)}
 						<div
 							class="card h-auto w-auto p-12 rounded-lg bg-white/15 backdrop-blur-md shadow-2xl shadow-blue-500/20"

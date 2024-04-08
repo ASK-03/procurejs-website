@@ -4,7 +4,6 @@
 	export let reverse = false;
 
 	import { inview } from 'svelte-inview';
-	// import { Motion } from 'svelte-motion';
 
 	let src = spec.src || '';
 	let designation = spec.designation || '';
@@ -12,11 +11,13 @@
 	let content = spec.content || '';
 
 	let style = reverse
-		? 'flex flex-row-reverse gap-40 mb-[4rem] items-center align-middle'
-		: 'flex flex-row gap-40 mb-[4rem] items-center align-middle';
+		? 'flex flex-col md:flex-row-reverse gap-10 md:gap-40 mb-[4rem] items-center align-middle'
+		: 'flex flex-col md:flex-row gap-10 md:gap-40 mb-[4rem] items-center align-middle';
 	let alignment = reverse
-		? 'left flex flex-col gap-3 text-right items-end'
-		: 'left flex flex-col gap-3';
+		? 'left flex flex-col gap-3 text-center md:text-right md:items-end'
+		: 'left flex flex-col text-center md:text-left gap-3';
+
+	let contentStyle = reverse ? 'md:text-right' : 'md:text-left';
 
 	let isInView;
 	const options = {
@@ -24,41 +25,33 @@
 		unobserveOnEnter: true
 	};
 
-	// const variants = {
-	// 	visible: {
-	// 		scale: 1,
-	// 		opacity: 1,
-	// 		transition: {
-	// 			duration: 5,
-	// 			delay: 5
-	// 		}
-	// 	},
-	// 	hidden: { opacity: 0, scale: 0.5 }
-	// };
-
 	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
 <div use:inview={options} on:inview_change={handleChange}>
 	{#if isInView}
-		<!-- <Motion let:motion {variants} inital="hidden" animate="visible"> -->
 		<div
-			class={`${style} px-20 py-10 bg-white/15 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/20`}
+			class={`${style} px-12 md:px-20 py-12 bg-white/15 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/20`}
 		>
-			<Img {src} alt="Picture" class="rounded-[50%] h-[15rem] shadow-[0_3px_10px_rgb(0,0,0,0.2)]" />
+			<Img
+				{src}
+				alt="Picture"
+				class="rounded-[50%] h-[15rem] w-[15rem] object-cover shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+			/>
 			<div class={alignment}>
 				<div class="heading text-white/70 text-[2rem] font-semibold flex flex-col">
 					<span class="mb-[-1rem]">Meet Our</span>
-					<span class="text-[#133541]/90 text-[3rem] font-bold">{designation}</span>
+					<span class="text-[#133541]/90 text-[3rem] font-bold mt-[1rem] leading-[3rem]"
+						>{designation}</span
+					>
 				</div>
 				<div class="subheading text-white/70 text-[20px] font-semibold">
 					{subHeading}
 				</div>
-				<div class="content w-[80%] text-white/70">
+				<div class="content md:w-[80%] text-white/70 text-center {contentStyle}">
 					{content}
 				</div>
 			</div>
 		</div>
-		<!-- </Motion> -->
 	{/if}
 </div>
