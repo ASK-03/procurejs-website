@@ -1,9 +1,9 @@
 <script>
 	import { Footer, FooterCopyright, FooterLinkGroup, FooterLink, Img } from 'flowbite-svelte';
-	import logo from '../static/procurejs-logo.png';
-	import TwitterLogo from '../static/twitter.svg';
-	import LinkedinLogo from '../static/linkedin.svg';
-	import MailLogo from '../static/mail.svg';
+	import logo from '@/static/procurejs-logo.png';
+	import InstagramLogo from '@/static/instagram.svg';
+	import LinkedinLogo from '@/static/linkedin.svg';
+	import MailLogo from '@/static/mail.svg';
 
 	const LogoStyle = 'h-[2em]';
 </script>
@@ -24,16 +24,16 @@
 				</div>
 				<div class="flex flex-row md:flex-col gap-4 items-center align-middle justify-around">
 					<div class="flex flex-row items-center">
-						<a href="/">
-							<Img class={LogoStyle} src={TwitterLogo}></Img>
-						</a>
-						<!-- <span class="md:mx-[16px] text-[#e5e5e5]">@procurejs-twitter</span> -->
-					</div>
-					<div class="flex flex-row items-center">
-						<a href="/">
+						<a href="https://www.linkedin.com/company/procurejs/?viewAsMember=true" target="_blank">
 							<Img class={LogoStyle} src={LinkedinLogo}></Img>
 						</a>
 						<!-- <span class="md:mx-[16px] text-[#e5e5e5]">@procurejs-Linkedin</span> -->
+					</div>
+					<div class="flex flex-row items-center">
+						<a href="https://www.instagram.com/procurejs_official/" target="_blank">
+							<Img class={LogoStyle} src={InstagramLogo}></Img>
+						</a>
+						<!-- <span class="md:mx-[16px] text-[#e5e5e5]">@procurejs-twitter</span> -->
 					</div>
 					<div class="flex flex-row items-center">
 						<a href="mailto:jaishree@procurejs.in">

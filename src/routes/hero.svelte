@@ -11,7 +11,11 @@
 >
 	<div class="relative md:mt-[3rem] flex align-middle items-center justify-between">
 		<div class="">
-			<img src={logo} alt="" class="h-[4.5rem] sm:h-100" />
+			<img
+				src={logo}
+				alt="India's Best Sourcing and Procurement Company. ProcureJs"
+				class="h-[4.5rem] sm:h-100"
+			/>
 		</div>
 		<div class="hidden xl:block">
 			<Button text="Contact" link="#contact" />
