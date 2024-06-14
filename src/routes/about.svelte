@@ -49,17 +49,22 @@
 	// our commitment to customization means that every client receives tailored solutions that meet their exact needs with precision and care.
 </script>
 
-<section class="about h-fit w-[100%] px-[20px] md:px-[162px] pt-[48px] pb-[32px]" id="about">
+<section
+	class="about h-fit md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] pt-[48px] pb-[32px]"
+	id="about"
+>
 	<Heading display="left" heading="About" subHeading="Know Us Better!" />
-	<div class="about-card mt-[6rem] flex flex-col">
-		<AboutCard spec={FounderInfo} />
-		<AboutCard spec={CTOInfo} reverse={true} />
+	<div class="w-full flex align-middle items-center">
+		<div class="about-card mt-[6rem] flex flex-col">
+			<AboutCard spec={FounderInfo} />
+			<AboutCard spec={CTOInfo} reverse={true} />
+		</div>
 	</div>
 
-	<div class="grid md:grid-cols-4 gap-4 md:gap-10">
+	<div class="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-10 mx-auto">
 		{#each benefits as benefit, index (`benefit-${index}`)}
 			<div
-				class="card h-auto w-auto p-12 rounded-lg bg-white/15 backdrop-blur-md shadow-2xl shadow-blue-500/20"
+				class="card mx-auto h-auto min-w-[18rem] max-w-[20rem] w-auto p-12 rounded-lg bg-white/15 backdrop-blur-md shadow-2xl shadow-blue-500/20"
 			>
 				<!-- <img class="w-auto h-[20vh] object-contain" src={benefit.image} alt={benefit.title} /> -->
 				<h1 class="text-white font-semibold text-[21px] pt-8 pb-2">

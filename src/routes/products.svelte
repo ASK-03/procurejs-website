@@ -30,7 +30,7 @@
 		},
 		{
 			title: 'Furnitures',
-			link: 'https://userogue.com',
+			link: '/',
 			thumbnail: FurnitureImage
 		},
 
@@ -114,11 +114,11 @@
 		subHeading="Some Catchy Line"
 		headingColor="#e5e5e5"
 		subHeadingColor="#e5e5e5"
-		className="px-[20px] md:px-[162px]"
+		className="px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px]"
 	/>
 	<div use:inview={options} on:inview_change={handleChange}>
 		{#if isInView}
-			<div class="mt-32 w-[100vw] overflow-hidden">
+			<div class="mt-32 md:w-[100%] sm:w-[calc(100dvh)] overflow-hidden">
 				<HeroParallax {products} />
 			</div>
 		{/if}

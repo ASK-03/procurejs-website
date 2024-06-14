@@ -4,7 +4,7 @@
 	import heroSectionImage from '@/static/world.svg';
 </script>
 
-<div class="img">
+<div class="img hidden xl:block -z-50">
 	<Img
 		src={heroSectionImage}
 		alt="A hand with a magnifying glass looking at India in globe"

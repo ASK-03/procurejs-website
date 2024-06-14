@@ -10,19 +10,19 @@
 
 <!-- bg-[#2A4064] -->
 <div
-	class="footer md:flex md:items-center md:justify-center md:align-middle px-[20px] md:px-[162px] py-[48px] md:pt-10"
+	class="footer w-[100%] flex items-center justify-center align-middle px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] py-[48px] md:pt-10"
 >
 	<div
-		class="flex flex-row items-center align-middle justify-center bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20 px-12 py-10 md:py-12"
+		class="flex w-full flex-row items-center align-middle justify-center bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20 px-12 py-10 md:py-12"
 	>
 		<div class="md:mx-[112px] md:flex md:justify-around md:align-middle md:items-center">
-			<div class="grid md:grid-cols-3 gap-10 sm:gap-12 sm:grid-cols-3 w-[100%]">
+			<div class="grid xl:grid-cols-3 gap-10 sm:gap-12 w-[100%]">
 				<div class="flex flex-col items-center align-middle justify-center">
 					<a href="/">
-						<Img src={logo} alt="Procure J S Logo" class="me-3 h-[8rem] sm:h-100 rounded-lg" />
+						<Img src={logo} alt="ProcureJs Logo" class="me-3 h-[8rem] sm:h-100 rounded-lg" />
 					</a>
 				</div>
-				<div class="flex flex-row md:flex-col gap-4 items-center align-middle justify-around">
+				<div class="flex flex-row xl:flex-col gap-4 items-center align-middle justify-around">
 					<div class="flex flex-row items-center">
 						<a href="https://www.linkedin.com/company/procurejs/?viewAsMember=true" target="_blank">
 							<Img class={LogoStyle} src={LinkedinLogo}></Img>

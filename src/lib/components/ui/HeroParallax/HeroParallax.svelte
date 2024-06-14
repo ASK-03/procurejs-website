@@ -22,15 +22,12 @@
 		useTransform(scrollYProgress, [0, 1], [0, -1000]),
 		springConfig
 	);
-	// const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
 	const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
-	// const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [100, 0]), springConfig);
-	// const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
 </script>
 
 <div
 	bind:this={ref}
-	class="relative flex h-[150vh] w-[100vw] flex-col py-4 overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d]"
+	class="relative flex h-[120vh] lg:h-[150vh] w-[100vw] flex-col py-4 overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d]"
 >
 	<Motion
 		let:motion

@@ -1,6 +1,6 @@
 <script>
 	import Heading from '@/components/Heading.svelte';
-	import { Card, Button, Label, Input, Textarea, Alert } from 'flowbite-svelte';
+	import { Button, Label, Input, Textarea, Alert } from 'flowbite-svelte';
 	import { InfoCircleSolid } from 'flowbite-svelte-icons';
 	import contactUsImage from '@/static/contact.svg';
 
@@ -45,7 +45,7 @@
 </script>
 
 <section
-	class="contact h-fit md:h-screen md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[162px] pt-[48px] pb-[32px]"
+	class="contact h-fit lg:h-screen md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] pt-[48px] lg:pb-[32px]"
 	id="contact"
 >
 	<div use:inview={options} on:inview_change={handleChange}>
@@ -62,9 +62,9 @@
 			{/if}
 
 			<div
-				class="contact-form mt-[6rem] flex flex-col md:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20"
+				class="contact-form mt-[6rem] flex flex-col lg:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20"
 			>
-				<div class="w-full md:w-[50%]">
+				<div class="w-full lg:w-[50%]">
 					<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
 						<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
 						<div>
@@ -91,7 +91,7 @@
 					</form>
 				</div>
 
-				<div class="contact-us-image h-0 w-0 hidden md:block md:h-fit md:w-fit">
+				<div class="contact-us-image h-0 w-0 hidden lg:block md:h-fit md:w-fit">
 					<img src={contactUsImage} alt="contact us illustration" />
 				</div>
 			</div>

@@ -11,8 +11,8 @@
 	let content = spec.content || '';
 
 	let style = reverse
-		? 'flex flex-col md:flex-row-reverse gap-10 md:gap-40 mb-[4rem] items-center align-middle'
-		: 'flex flex-col md:flex-row gap-10 md:gap-40 mb-[4rem] items-center align-middle';
+		? 'flex flex-col lg:flex-row-reverse gap-10 md:gap-16 xl:gap-40 mb-[4rem] items-center align-middle'
+		: 'flex flex-col lg:flex-row gap-10 md:gap-16 xl:gap-40 mb-[4rem] items-center align-middle';
 	let alignment = reverse
 		? 'left flex flex-col gap-3 text-center md:text-right md:items-end'
 		: 'left flex flex-col text-center md:text-left gap-3';
