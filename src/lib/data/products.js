@@ -1,5 +1,4 @@
 import FurnitureImage from '@/static/couch.jpg';
-import FashionAcessoriesImage from '@/static/fashion-acessories.jpg';
 import DecorImage from '@/static/decor.jpg';
 import JeweleryImage from '@/static/jewelery.jpg';
 import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
