@@ -75,10 +75,7 @@
 	];
 </script>
 
-<section
-	class="service h-fit md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[162px] pt-[48px] pb-[32px]"
-	id="services"
->
+<section class="service pt-[48px] pb-[32px]" id="services">
 	<Heading display="left" heading="Service" subHeading="Served with Love" />
 	<div class="mt-[6rem] flex flex-col align-middle items-center justify-center">
 		{#each dummyContent as item, index (`content-${index}`)}

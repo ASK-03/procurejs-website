@@ -49,10 +49,7 @@
 	// our commitment to customization means that every client receives tailored solutions that meet their exact needs with precision and care.
 </script>
 
-<section
-	class="about h-fit md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] pt-[48px] pb-[32px]"
-	id="about"
->
+<section class="about pt-[48px] pb-[32px]" id="about">
 	<Heading display="left" heading="About" subHeading="Know Us Better!" />
 	<div class="w-full flex align-middle items-center">
 		<div class="about-card mt-[6rem] flex flex-col">

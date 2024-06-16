@@ -5,10 +5,7 @@
 </script>
 
 <!-- bg-[#2A4064] -->
-<section
-	class="products h-fit md:w-[100%] sm:w-[calc(100dvh)] pt-[48px] pb-[32px] px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px]"
-	id="products"
->
+<section class="products pt-[48px] pb-[32px]" id="products">
 	<Heading
 		display="left"
 		heading="Products"

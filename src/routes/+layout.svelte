@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import Loader from '@/components/Loader.svelte';
+	import HOC from '@/components/hoc.svelte';
 	import '../app.css';
 
 	// web-analytics vercel
@@ -20,5 +21,7 @@
 {#if isLoading}
 	<Loader />
 {:else}
-	<slot />
+	<HOC page={$$props.page}>
+		<slot />
+	</HOC>
 {/if}

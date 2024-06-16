@@ -44,10 +44,7 @@
 	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
-<section
-	class="contact h-fit lg:h-screen md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] pt-[48px] lg:pb-[32px]"
-	id="contact"
->
+<section class="contact pt-[48px] pb-[32px]" id="contact">
 	<div use:inview={options} on:inview_change={handleChange}>
 		{#if isInView}
 			<Heading display="left" heading="Contact" subHeading="Get in Touch" />

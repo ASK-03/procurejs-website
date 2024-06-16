@@ -13,9 +13,7 @@
 	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
-<section
-	class="benefits h-fit md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] pt-[48px] pb-[32px] snap-start"
->
+<section class="benefits pt-[48px] pb-[32px]">
 	<Heading display="right" heading="Benefits" subHeading="Why Choose Us?" />
 
 	<div use:inview={options} on:inview_change={handleChange}>

@@ -4,9 +4,7 @@
 	import HeroSectionRightComponent from '@/components/HeroSectionRightComponent.svelte';
 </script>
 
-<section
-	class="hero-section h-fit md:w-[100%] sm:w-[calc(100dvh)] px-[20px] md:px-[80px] lg:px-[162px] pb-[32px]"
->
+<section class="hero-section pt-[16px] pb-[32px]">
 	<div class="mt-6 z-10">
 		<Navbar />
 	</div>

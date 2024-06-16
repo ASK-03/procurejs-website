@@ -9,9 +9,7 @@
 </script>
 
 <!-- bg-[#2A4064] -->
-<div
-	class="footer w-[100%] flex items-center justify-center align-middle px-[20px] md:px-[80px] lg:px-[100px] xl:px-[162px] py-[48px] md:pt-10"
->
+<div class="footer flex items-center justify-center align-middle pt-[48px] pb-[32px]">
 	<div
 		class="flex w-full flex-row items-center align-middle justify-center bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20 px-12 py-10 md:py-12"
 	>
