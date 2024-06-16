@@ -11,8 +11,8 @@
 	let content = spec.content || '';
 
 	let style = reverse
-		? 'flex flex-col lg:flex-row-reverse gap-10 md:gap-16 xl:gap-40 mb-[4rem] items-center align-middle'
-		: 'flex flex-col lg:flex-row gap-10 md:gap-16 xl:gap-40 mb-[4rem] items-center align-middle';
+		? 'card flex flex-col lg:flex-row-reverse gap-10 md:gap-16 xl:gap-40 mb-[4rem] items-center align-middle'
+		: 'card flex flex-col lg:flex-row gap-10 md:gap-16 xl:gap-40 mb-[4rem] items-center align-middle';
 	let alignment = reverse
 		? 'left flex flex-col gap-3 text-center md:text-right md:items-end'
 		: 'left flex flex-col text-center md:text-left gap-3';
@@ -31,12 +31,12 @@
 <div use:inview={options} on:inview_change={handleChange}>
 	{#if isInView}
 		<div
-			class={`${style} px-12 md:px-20 py-12 bg-white/15 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/20`}
+			class={`${style} px-12 md:px-20 py-12 bg-white/15 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/20 `}
 		>
 			<Img
 				{src}
 				alt="Picture"
-				class="rounded-[50%] h-[15rem] w-[15rem] object-cover shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+				class="card-image rounded-[50%] h-[15rem] w-[15rem] object-cover shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
 			/>
 			<div class={alignment}>
 				<div class="heading text-white/70 text-[2rem] font-semibold flex flex-col">
@@ -55,3 +55,10 @@
 		</div>
 	{/if}
 </div>
+
+<style>
+	.card,
+	.card-image {
+		transition: transform 0.5s ease-in-out;
+	}
+</style>

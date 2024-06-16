@@ -14,6 +14,9 @@ const config = {
 
 	theme: {
 		extend: {
+			screens: {
+				xs: '592px'
+			},
 			fontFamily: {
 				montserrat: ['Montserrat']
 			},

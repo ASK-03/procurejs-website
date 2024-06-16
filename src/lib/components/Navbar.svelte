@@ -2,29 +2,33 @@
 	import { Navbar, NavBrand, NavHamburger, NavUl, NavLi, MegaMenu } from 'flowbite-svelte';
 	import logo from '@/static/procurejs-logo.png';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
-	import Products from '../../routes/products.svelte';
-	let menu2 = [
-		{ name: 'Jewelry', help: "Connect with third-party tools that you're already using." },
-		{
-			name: 'Decor and Utility',
-			help: "Connect with third-party tools that you're already using."
-		},
-		{ name: 'Marketing CRM', help: "Connect with third-party tools that you're already using." },
+	import products from '@/data/products.js';
 
-		{ name: 'Online Stores', help: "Connect with third-party tools that you're already using." },
-		{ name: 'Segmentation', help: "Connect with third-party tools that you're already using." },
-		{ name: 'Marketing CRM', help: "Connect with third-party tools that you're already using." },
+	// // image appear when hover over li in products section
+	// import { onMount } from 'svelte';
+	// let imageVisible = false;
+	// let imageX = 0;
+	// let imageY = 0;
+	// let card;
 
-		{
-			name: 'Audience Management',
-			help: "Connect with third-party tools that you're already using."
-		},
-		{ name: 'Creative Tools', help: "Connect with third-party tools that you're already using." },
-		{
-			name: 'Marketing Automation',
-			help: "Connect with third-party tools that you're already using."
-		}
-	];
+	// const showImage = (event) => {
+	// 	imageVisible = true;
+	// 	updateImagePosition(event);
+	// };
+
+	// const hideImage = () => {
+	// 	imageVisible = false;
+	// };
+
+	// const updateImagePosition = (event) => {
+	// 	imageX = event.clientX + 10; // Adjust the offset as needed
+	// 	imageY = event.clientY + 10; // Adjust the offset as needed
+	// };
+
+	// onMount(() => {
+	// 	card.addEventListener('mousemove', updateImagePosition);
+	// });
+	//
 </script>
 
 <Navbar color="none" let:hidden let:toggle>
@@ -48,17 +52,20 @@
 			color="none"
 			nonActiveClass="text-[#808080] md:text-[#E5E5E5] lg:text-xl"
 			class="z-10 md:mt-[1rem] w-[100%] mx-auto md:-translate-x-[4%] lg:-translate-x-[15%] lg:w-[80%] rounded-xl h-fit border-none bg-white/85 backdrop-blur-xl shadow-2xl shadow-slate-500/10"
-			items={menu2}
+			items={products}
 			let:item
 		>
-			<a href="/" class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 h-full">
+			<a
+				href={item.link}
+				class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 h-full"
+			>
 				<div class="font-semibold dark:text-[#E5E5E5]">{item.name}</div>
 				<span class="text-sm font-light text-gray-500 dark:text-gray-400">{item.help}</span>
 			</a>
 		</MegaMenu>
 		<NavLi nonActiveClass="text-[#808080] md:text-[#E5E5E5] text-lg lg:text-xl" href="/#services"
-			>Services</NavLi
-		>
+			>Services
+		</NavLi>
 		<NavLi nonActiveClass="text-[#808080] md:text-[#E5E5E5] text-lg lg:text-xl" href="/#contact">
 			Contact
 		</NavLi>

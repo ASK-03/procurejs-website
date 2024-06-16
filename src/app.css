@@ -9,6 +9,10 @@
     font-family: montserrat, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     background-image: radial-gradient(circle at 75% 50%,
