@@ -11,7 +11,7 @@
 <!-- bg-[#2A4064] -->
 <div class="footer flex items-center justify-center align-middle pt-[48px] pb-[32px]">
 	<div
-		class="flex w-full flex-row items-center align-middle justify-center bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20 px-12 py-10 md:py-12"
+		class="flex w-full flex-row items-center align-middle justify-center rounded-xl bg-light-cardBgColor/15 hover:bg-light-cardBgColor/30 backdrop-blur-md shadow-2xl shadow-light-accent/10 hover:shadow-light-accent/20 hover:shadow-3xl transition duration-500 ease-in-out px-12 py-10 md:py-12"
 	>
 		<div class="md:mx-[112px] md:flex md:justify-around md:align-middle md:items-center">
 			<div class="grid xl:grid-cols-3 gap-10 sm:gap-12 w-[100%]">
@@ -41,17 +41,17 @@
 					</div>
 				</div>
 				<div class="flex flex-col items-start align-middle">
-					<h1 class="text-[#FFFFFF] text-[24px] tracking-tighter">Mailing Address :</h1>
-					<p class="text-[#efefef] my-[8px] md:my-[16px] font-light">
+					<h1 class="text-light-textColor text-[24px] tracking-tighter">Mailing Address :</h1>
+					<p class="text-light-textColor/80 my-[8px] md:my-[16px] font-light">
 						<a
 							href="https://maps.app.goo.gl/RSnjAeAcw3gz8Hz97"
 							target="_blank"
-							class="text-[18px] hover:text-[#FFFFFF] hover:underline"
+							class="text-[18px] hover:text-light-textColor hover:underline"
 							>U-001, BPTP Park Floor - 1, Sector - 77, Faridabad, Haryana</a
 						>
 					</p>
 					<div class="mt-[32px] md:my-[32px]">
-						<FooterCopyright spanClass="text-[#e5e5e5]" href="/" by="ProcureJs" />
+						<FooterCopyright spanClass="text-light-textColor" href="/" by="ProcureJs" />
 					</div>
 				</div>
 			</div>

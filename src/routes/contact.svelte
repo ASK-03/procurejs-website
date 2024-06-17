@@ -59,30 +59,51 @@
 			{/if}
 
 			<div
-				class="contact-form mt-[6rem] flex flex-col lg:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 bg-white/15 backdrop-blur-xl rounded-lg shadow-2xl shadow-blue-500/20"
+				class="contact-form mt-[6rem] flex flex-col lg:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 rounded-xl bg-light-cardBgColor/15 hover:bg-light-cardBgColor/30 backdrop-blur-md shadow-2xl shadow-light-accent/10 hover:shadow-light-accent/20 hover:shadow-3xl transition duration-500 ease-in-out"
 			>
 				<div class="w-full lg:w-[50%]">
 					<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
 						<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
 						<div>
-							<Label for="name" class="block mb-2 text-xl font-medium text-white/90">Name</Label>
-							<Input id="name" type="text" name="name" placeholder="Name" required />
+							<Label for="name" class="block mb-2 text-xl font-medium text-light-textColor/90"
+								>Name</Label
+							>
+							<Input
+								class="bg-light-background"
+								id="name"
+								type="text"
+								name="name"
+								placeholder="Name"
+								required
+							/>
 						</div>
-						<Label class="space-y-2 text-xl font-medium text-white/90">
+						<Label class="space-y-2 text-xl font-medium text-light-textColor/90">
 							<span>Email</span>
-							<Input type="email" name="email" placeholder="name@company.com" required />
+							<Input
+								class="bg-light-background"
+								type="email"
+								name="email"
+								placeholder="name@company.com"
+								required
+							/>
 						</Label>
 						<div class="mb-6">
-							<Label for="subject" class="block mb-2 text-xl font-medium text-white/90"
+							<Label for="subject" class="block mb-2 text-xl font-medium text-light-textColor/90"
 								>Subject</Label
 							>
-							<Input id="subject" name="_subject" placeholder="Subject" required />
+							<Input
+								class="bg-light-background"
+								id="subject"
+								name="_subject"
+								placeholder="Subject"
+								required
+							/>
 						</div>
 						<div>
-							<Label for="message" class="block mb-2 text-xl font-medium text-white/90"
+							<Label for="message" class="block mb-2 text-xl font-medium text-light-textColor/90"
 								>Message</Label
 							>
-							<Textarea {...textareaprops} />
+							<Textarea {...textareaprops} class="bg-light-background" />
 						</div>
 						<Button type="submit" class="w-full">Send</Button>
 					</form>

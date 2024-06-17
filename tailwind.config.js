@@ -34,6 +34,14 @@ const config = {
 					700: '#7e22ce',
 					800: '#6b21a8',
 					900: '#581c87'
+				},
+
+				light: {
+					background: '#f2f2f2',
+					purple: '#6557f1',
+					cardBgColor: '#6a61ff',
+					textColor: '#3f3d56',
+					accent: '#133541'
 				}
 			},
 			animation: {

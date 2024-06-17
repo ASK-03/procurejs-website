@@ -15,7 +15,8 @@ html {
 
 body {
     overflow-x: hidden;
-    background-image: radial-gradient(circle at 75% 50%,
+    background-color: #f2f2f2;
+    /* background-image: radial-gradient(circle at 75% 50%,
             #2158b1,
             #2154a2,
             #234f94,
@@ -27,7 +28,7 @@ body {
             #21375b,
             #1d3358,
             #193054,
-            #152c51);
+            #152c51); */
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */

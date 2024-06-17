@@ -31,34 +31,36 @@
 <div use:inview={options} on:inview_change={handleChange}>
 	{#if isInView}
 		<div
-			class={`${style} px-12 md:px-20 py-12 bg-white/15 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/20 `}
+			class={`${style} px-12 md:px-20 py-12 rounded-xl bg-light-cardBgColor/15 hover:bg-light-cardBgColor/25 backdrop-blur-md shadow-2xl shadow-light-accent/10 hover:shadow-light-accent/20 hover:shadow-3xl transition duration-500 ease-in-out`}
 		>
 			<Img
 				{src}
 				alt="Picture"
-				class="card-image rounded-[50%] h-[15rem] w-[15rem] object-cover shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+				class={`card-image rounded-[50%] h-[15rem] w-[15rem] object-cover shadow-2xl shadow-light-accent/30 hover:shadow-light-accent/50 hover:shadow-3xl 
+				${reverse == true ? 'hover:rotate-12' : 'hover:-rotate-12'} 
+				hover:scale-105 transition duration-500 ease-in-out`}
 			/>
 			<div class={alignment}>
-				<div class="heading text-white/70 text-[2rem] font-semibold flex flex-col">
+				<div class="heading text-light-textColor/75 text-[2rem] font-semibold flex flex-col">
 					<span class="mb-[-1rem]">Meet Our</span>
-					<span class="text-[#133541]/90 text-[3rem] font-bold mt-[1rem] leading-[3rem]"
+					<span class="text-light-accent/80 text-[3rem] font-bold mt-[1rem] leading-[3rem]"
 						>{designation}</span
 					>
 				</div>
-				<div class="subheading text-white/70 text-[20px] font-semibold">
+				<div class="subheading text-light-textColor/90 text-[20px] font-semibold">
 					{subHeading}
 				</div>
-				<div class="content md:w-[80%] text-white/70 text-center {contentStyle}">
+				<div class="content md:w-[80%] text-light-textColor/80 text-center {contentStyle}">
 					{content}
 				</div>
 			</div>
 		</div>
 	{/if}
 </div>
-
+<!-- 
 <style>
 	.card,
 	.card-image {
-		transition: transform 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
-</style>
+</style> -->

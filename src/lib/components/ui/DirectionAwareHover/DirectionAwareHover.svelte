@@ -99,7 +99,7 @@
 		use:motion
 		on:mouseenter={handleMouseEnter}
 		bind:this={ref}
-		class={`group/card relative h-120 w-120 overflow-hidden rounded-lg bg-transparent md:h-150 md:w-150 ${className} `}
+		class={`group/card relative h-120 w-120 overflow-hidden rounded-lg bg-transparent md:h-150 md:w-150 shadow-2xl shadow-light-cardBgColor/20 ${className} `}
 	>
 		<AnimatePresence show={true}>
 			<Motion let:motion initial="initial" whileHover={direction} exit="exit">

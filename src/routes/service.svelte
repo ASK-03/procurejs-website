@@ -81,17 +81,17 @@
 		{#each dummyContent as item, index (`content-${index}`)}
 			<div class="mb-[6vh] max-mb-[3rem] flex flex-col align-middle items-center justify-center">
 				<h2
-					class="mb-4 w-fit rounded-full bg-white/10 backdrop-blur-xl px-6 py-1 text-2xl font-montserrat text-white shadow-2xl shadow-blue-500/20"
+					class="mb-4 w-fit rounded-full bg-light-purple backdrop-blur-xl px-6 py-1 text-2xl font-montserrat text-white shadow-2xl shadow-light-cardBgColor/20"
 				>
 					{item.badge}
 				</h2>
-				<h1 class={twMerge('mb-4 text-[32px] text-white')}>
+				<h1 class={twMerge('mb-4 text-[32px] text-light-textColor')}>
 					{item.title}
 				</h1>
 				{#if item?.image}
 					<!-- show when on tablet or mobile -->
 					<div
-						class="flex flex-col align-middle w-full items-center justify-between gap-4 bg-white/15 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/20 xl:hidden"
+						class="flex flex-col align-middle w-full items-center justify-between gap-4 rounded-xl bg-light-cardBgColor/15 backdrop-blur-md shadow-2xl shadow-light-cardBgColor/10 xl:hidden"
 					>
 						<img
 							class="z-0 rounded-tl-xl rounded-tr-xl w-full max-h-[400px] object-cover"
@@ -99,7 +99,7 @@
 							alt={item.description}
 						/>
 						<div
-							class="flex z-10 items-center align-middle justify-center text-white/90 text-[16px] sm:text-[20px] p-[2rem] sm:px-[2rem]"
+							class="flex z-10 items-center align-middle justify-center text-light-textColor/90 text-[16px] sm:text-[20px] p-[2rem] sm:px-[2rem]"
 						>
 							{@html item.description}
 						</div>

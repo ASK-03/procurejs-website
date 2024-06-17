@@ -10,8 +10,8 @@
 		display="left"
 		heading="Products"
 		subHeading="Our Premium Selections!"
-		headingColor="#e5e5e5"
-		subHeadingColor="#e5e5e5"
+		headingColor="light-textColor"
+		subHeadingColor="light-textColor/80"
 		className=""
 	/>
 
