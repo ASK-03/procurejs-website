@@ -35,7 +35,7 @@
 </script>
 
 <div class={wrapperStyle}>
-	<div class={`side-block ${divStyle}`}></div>
+	<div class={divStyle}></div>
 	<div class={headingWrapperStyle}>
 		<h1 class={headingStyle}>
 			<TextGenerateEffect words={heading} />
