@@ -25,22 +25,24 @@
 	</div>
 
 	<div
-		class="container w-full mt-[5vh] flex-col gap-10 lg:gap-20 md:flex items-center align-middle"
+		class="container mx-auto w-full mt-[5vh] flex-col gap-10 lg:gap-16 md:flex items-center align-middle"
 	>
-		<div class="left__section w-full h-full flex-col items-center align-middle justify-center">
+		<div
+			class="left__section mx-auto w-full h-full flex-col items-center align-middle justify-center"
+		>
 			<h2 class="text-4xl font-bold text-center md:text-6xl text-light-textColor md:text-nowrap">
 				{pageDetails?.pageHeading}
 			</h2>
 			<p class="mt-4 w-full md:w-[70%] mx-auto text-xl text-center text-light-textColor/85">
 				{pageDetails?.pageSubHeading}
 			</p>
-			<div class="cta mt-10 relative w-fit mx-auto">
+			<div class="cta mt-10 flex-col w-[50%] xs:w-fit mx-auto">
 				<button
-					class="left-cta btn mx-auto md:mx-2 px-10 py-4 bg-light-cardBgColor text-light-background rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:border hover:border-light-purple/80 hover:text-light-purple/80 hover:scale-105"
+					class="left-cta btn w-full xs:w-fit mx-auto md:mx-2 px-10 py-4 bg-light-cardBgColor text-light-background rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:border hover:border-light-purple/80 hover:text-light-purple/80 hover:scale-105"
 					>Get Quotes</button
 				>
 				<button
-					class="right-cta btn my-2 md:mx-2 px-10 py-4 bg-transparent border border-light-cardBgColor text-light-cardBgColor rounded-lg transition duration-300 ease-in-out hover:bg-light-purple/80 hover:scale-105 hover:text-light-background hover:border-transparent"
+					class="right-cta btn my-2 w-full xs:w-fit md:mx-2 px-5 xs:px-10 py-4 bg-transparent border border-light-cardBgColor text-light-cardBgColor rounded-lg transition duration-300 ease-in-out hover:bg-light-purple/80 hover:scale-105 hover:text-light-background hover:border-transparent"
 					>See more products</button
 				>
 			</div>
