@@ -20,13 +20,13 @@ const products = [
 		thumbnail: RugsAndCarpetsImage
 	},
 	{
-		name: 'Hard Goods',
-		help: 'Long-lasting, quality essentials.',
-		link: '/hard-goods',
+		name: 'Kitchen Essentials',
+		help: 'Must-have items for every kitchen',
+		link: '/kitchen-essentials',
 		thumbnail: HardGoodsImage
 	},
 	{
-		name: 'Fashon Wear',
+		name: 'Fashion Wear',
 		help: 'Trendy outfits for every occasion.',
 		link: '/fashion-wear',
 		thumbnail: ApparelsAndSportsWearImage
@@ -53,7 +53,7 @@ const products = [
 	{
 		name: 'Elegant Furniture',
 		help: 'Stylish and functional furniture pieces.',
-		link: '/elegant-furniture',
+		link: '/furniture',
 		thumbnail: FurnitureImage
 	},
 	{

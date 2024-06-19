@@ -1,9 +1,9 @@
 <script>
 	import ProductCategoryComponent from '@/components/product-category-component/ProductCategoryComponent.svelte';
-	import selfCareEssentialPageDetails from './selfcare_essentials.js';
+	import furniturePageDetails from './furniture.js';
 
-	const metaDetails = selfCareEssentialPageDetails.metaDetails;
-	const pageDetails = selfCareEssentialPageDetails.pageDetails;
+	const metaDetails = furniturePageDetails.metaDetails;
+	const pageDetails = furniturePageDetails.pageDetails;
 </script>
 
 <section>
