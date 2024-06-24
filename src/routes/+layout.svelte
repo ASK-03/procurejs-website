@@ -14,9 +14,13 @@
 	let isLoading = true;
 
 	onMount(() => {
-		isLoading = false;
+		setTimeout(() => {
+			isLoading = false;
+		}, 1000);
 	});
 </script>
+
+<!-- <Loader /> -->
 
 {#if isLoading}
 	<Loader />

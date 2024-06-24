@@ -1,7 +1,9 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/accessories/1.jpeg';
+import Image2 from '@/static/products/accessories/2.jpeg';
+import Image3 from '@/static/products/accessories/3.jpeg';
+import Image4 from '@/static/products/accessories/4.jpeg';
+import Image5 from '@/static/products/accessories/5.jpeg';
+import Image6 from '@/static/products/accessories/6.jpg';
 
 const accessoriesPageDetails = {
 	metaDetails: {
@@ -17,27 +19,27 @@ const accessoriesPageDetails = {
 			'Complete your look with our curated selection of accessories. From elegant jewelry to trendy handbags, our collection offers the perfect finishing touches for any outfit.',
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image6,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			}
 		]

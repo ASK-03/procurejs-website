@@ -1,9 +1,11 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/kitchen-essentials/1.jpeg';
+import Image2 from '@/static/products/kitchen-essentials/2.jpeg';
+import Image3 from '@/static/products/kitchen-essentials/3.jpeg';
+import Image4 from '@/static/products/kitchen-essentials/4.jpeg';
+import Image5 from '@/static/products/kitchen-essentials/5.jpeg';
+import Image6 from '@/static/products/kitchen-essentials/6.jpeg';
 
-const homeFabricsPageDetails = {
+const kitechenEssentialsPageDetails = {
 	metaDetails: {
 		pageTitle: 'ProcureJs | Kitchen Essentials',
 		description: 'Must-have items for every kitchen',
@@ -17,31 +19,31 @@ const homeFabricsPageDetails = {
 			'Outfit your kitchen with our premium essentials. From high-quality cutlery and cookware to stylish kitchen towels and gadgets, our collection ensures functionality and style in every meal preparation.',
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image6,
 				description: 'Home Fabrics 1'
 			}
 		]
 	}
 };
 
-export default homeFabricsPageDetails;
+export default kitechenEssentialsPageDetails;

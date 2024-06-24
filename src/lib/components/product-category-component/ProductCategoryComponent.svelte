@@ -4,12 +4,6 @@
 	export let metaDetails = {};
 	export let pageDetails = {};
 
-	// filler images
-	// import FurnitureImage from '@/static/couch.jpg';
-	// import DecorImage from '@/static/decor.jpg';
-	// import JeweleryImage from '@/static/jewelery.jpg';
-	// import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
-
 	const products = pageDetails?.products || [];
 </script>
 
@@ -37,17 +31,23 @@
 				{pageDetails?.pageSubHeading}
 			</p>
 			<div class="cta mt-10 flex-col w-[50%] xs:w-fit mx-auto">
-				<button
-					class="left-cta btn w-full xs:w-fit mx-auto md:mx-2 px-10 py-4 bg-light-cardBgColor text-light-background rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:border hover:border-light-purple/80 hover:text-light-purple/80 hover:scale-105"
-					>Get Quotes</button
-				>
-				<button
-					class="right-cta btn my-2 w-full xs:w-fit md:mx-2 px-5 xs:px-10 py-4 bg-transparent border border-light-cardBgColor text-light-cardBgColor rounded-lg transition duration-300 ease-in-out hover:bg-light-purple/80 hover:scale-105 hover:text-light-background hover:border-transparent"
-					>See more products</button
-				>
+				<a href="/#contact">
+					<button
+						class="left-cta btn w-full xs:w-fit mx-auto md:mx-2 px-10 py-4 bg-light-cardBgColor text-light-background rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:border hover:border-light-purple/80 hover:text-light-purple/80 hover:scale-105"
+						>Get Quotes</button
+					>
+				</a>
+				<a href="/#products">
+					<button
+						class="right-cta btn my-2 w-full xs:w-fit md:mx-2 px-5 xs:px-10 py-4 bg-transparent border border-light-cardBgColor text-light-cardBgColor rounded-lg transition duration-300 ease-in-out hover:bg-light-purple/80 hover:scale-105 hover:text-light-background hover:border-transparent"
+						>See more products</button
+					>
+				</a>
 			</div>
 		</div>
-		<div class="right__section bento-grid md:w-[70%] mx-auto">
+		<div
+			class="right__section bento-grid md:w-[70%] max-h-[90vh] gap-[0.5rem] md:gap-[1rem] mt-10 mx-auto"
+		>
 			<div class="bento-grid-item item-a">
 				<img src={products[0]?.thumbnail} alt={products[0]?.description} />
 			</div>
@@ -77,7 +77,6 @@
 			'a a b b'
 			'a a c d'
 			'e f f d';
-		gap: 1rem;
 	}
 	.bento-grid-item {
 		position: relative;
@@ -89,7 +88,6 @@
 
 	.bento-grid-item:hover {
 		box-shadow: 0.8rem 1.2rem 1rem rgba(63, 61, 86, 0.1);
-		transform: skew(-1deg);
 	}
 
 	.bento-grid-item img {

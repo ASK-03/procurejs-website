@@ -1,7 +1,9 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/baby-essentials/1.jpeg';
+import Image2 from '@/static/products/baby-essentials/2.jpeg';
+import Image3 from '@/static/products/baby-essentials/3.jpeg';
+import Image4 from '@/static/products/baby-essentials/4.jpeg';
+import Image5 from '@/static/products/baby-essentials/5.jpeg';
+import Image6 from '@/static/products/baby-essentials/6.jpeg';
 
 const babyEssentialsPageDetails = {
 	metaDetails: {
@@ -17,27 +19,27 @@ const babyEssentialsPageDetails = {
 			"Care for your baby with our safe and gentle products. From clothing and bedding to nursery furniture and care items, our range ensures your baby's comfort and well-being.",
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image6,
 				description: 'Home Fabrics 1'
 			}
 		]

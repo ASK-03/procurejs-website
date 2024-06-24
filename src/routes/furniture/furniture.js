@@ -1,7 +1,9 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/elegant-furniture/1.jpg';
+import Image2 from '@/static/products/elegant-furniture/2.jpeg';
+import Image3 from '@/static/products/elegant-furniture/3.jpeg';
+import Image4 from '@/static/products/elegant-furniture/4.jpeg';
+import Image5 from '@/static/products/elegant-furniture/5.jpeg';
+import Image6 from '@/static/products/elegant-furniture/6.jpeg';
 
 const homeFabricsPageDetails = {
 	metaDetails: {
@@ -17,27 +19,27 @@ const homeFabricsPageDetails = {
 			'Enhance your home with our elegant furniture collection. Find timeless pieces for your living room, bedroom, and dining area that combine style and comfort.',
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image6,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			}
 		]

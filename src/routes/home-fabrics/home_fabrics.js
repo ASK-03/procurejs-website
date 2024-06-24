@@ -1,7 +1,8 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/home-fabrics/1.png';
+import Image2 from '@/static/products/home-fabrics/2.png';
+import Image3 from '@/static/products/home-fabrics/3.png';
+import Image4 from '@/static/products/home-fabrics/4.png';
+import Image5 from '@/static/products/home-fabrics/5.jpeg';
 
 const homeFabricsPageDetails = {
 	metaDetails: {
@@ -17,27 +18,27 @@ const homeFabricsPageDetails = {
 			'Explore luxurious curtains, cushions, and upholstery fabrics to elevate your home décor. Find patterns and textures that suit every style and create a cozy, inviting atmosphere.',
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			}
 		]

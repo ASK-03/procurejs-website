@@ -1,7 +1,9 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/fashion-wear/1.jpeg';
+import Image2 from '@/static/products/fashion-wear/2.jpeg';
+import Image3 from '@/static/products/fashion-wear/3.jpeg';
+import Image4 from '@/static/products/fashion-wear/4.jpeg';
+import Image5 from '@/static/products/fashion-wear/5.jpeg';
+import Image6 from '@/static/products/fashion-wear/6.jpeg';
 
 const fashionWearPageDetails = {
 	metaDetails: {
@@ -17,27 +19,27 @@ const fashionWearPageDetails = {
 			'Stay stylish with our latest clothing collection for all occasions. From casual wear to chic office outfits, find high-quality pieces that reflect your personal style.',
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image6,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			}
 		]

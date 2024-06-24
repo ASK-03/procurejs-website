@@ -1,7 +1,9 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
+import Image1 from '@/static/products/home-decor/1.jpeg';
+import Image2 from '@/static/products/home-decor/2.jpeg';
+import Image3 from '@/static/products/home-decor/3.jpeg';
+import Image4 from '@/static/products/home-decor/4.jpeg';
+import Image5 from '@/static/products/home-decor/5.jpeg';
+import Image6 from '@/static/products/home-decor/6.jpeg';
 
 const homeFabricsPageDetails = {
 	metaDetails: {
@@ -17,27 +19,27 @@ const homeFabricsPageDetails = {
 			'Transform your space with our home decor items, including wall art, throws, vases, and lighting. Add personality and charm to every room with our stylish decor pieces.',
 		products: [
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image1,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image2,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: JeweleryImage,
+				thumbnail: Image3,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: ApparelsAndSportsWearImage,
+				thumbnail: Image5,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: DecorImage,
+				thumbnail: Image6,
 				description: 'Home Fabrics 1'
 			},
 			{
-				thumbnail: FurnitureImage,
+				thumbnail: Image4,
 				description: 'Home Fabrics 1'
 			}
 		]
