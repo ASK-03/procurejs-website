@@ -1,5 +1,4 @@
 <script>
-	// import { Spinner } from 'flowbite-svelte';
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
 

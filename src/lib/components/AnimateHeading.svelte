@@ -1,26 +1,30 @@
 <script>
 	import { onMount } from 'svelte';
-	import { backOut } from 'svelte/easing';
-	import { fly } from 'svelte/transition';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	gsap.registerPlugin(ScrollTrigger);
+
 	export let lines;
-	let animate = false;
 
 	onMount(() => {
-		animate = true;
+		gsap.from('#line', {
+			opacity: 0,
+			y: 30,
+			duration: 0.5,
+			stagger: 0.1,
+			ease: 'power3.inOut'
+		});
 	});
 </script>
 
-{#if animate}
-	<h1
-		class="main-heading text-[48px] md:text-[64px] text-light-textColor leading-[48px] md:leading-[64px] font-semibold"
-		transition:fly={{ y: 50, duration: 2000, easing: backOut }}
-	>
-		{#each lines as line, i}
-			{#if i % 2 == 1}
-				<span class="text-[#6557f1]">{line}</span><br />
-			{:else}
-				<span>{line}</span> <br />
-			{/if}
-		{/each}
-	</h1>
-{/if}
+<h1
+	class="main-heading text-[48px] md:text-[64px] text-light-textColor leading-[48px] md:leading-[64px] font-semibold"
+>
+	{#each lines as line, i}
+		{#if i % 2 == 1}
+			<span id="line" class="text-[#6557f1] absolute">{line}</span><br />
+		{:else}
+			<span id="line" class="absolute">{line}</span> <br />
+		{/if}
+	{/each}
+</h1>

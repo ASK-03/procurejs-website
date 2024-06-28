@@ -4,8 +4,6 @@
 	import { InfoCircleSolid } from 'flowbite-svelte-icons';
 	import contactUsImage from '@/static/contact.svg';
 
-	import { inview } from 'svelte-inview';
-
 	let textareaprops = {
 		id: 'message',
 		name: 'message',
@@ -35,85 +33,74 @@
 			status = result.message || 'Success';
 		}
 	};
-
-	let isInView;
-	const options = {
-		rootMargin: '100px',
-		unobserveOnEnter: true
-	};
-	const handleChange = ({ detail }) => (isInView = detail.inView);
 </script>
 
 <section class="contact pt-[48px] pb-[32px]" id="contact">
-	<div use:inview={options} on:inview_change={handleChange}>
-		{#if isInView}
-			<Heading display="left" heading="Contact" subHeading="Get in Touch" />
+	<Heading display="left" heading="Contact" subHeading="Get in Touch" />
 
-			{#if status}
-				<div class="absolute md:inset-x-[162px]">
-					<Alert color="green" class="mt-10" dismissable>
-						<InfoCircleSolid slot="icon" class="w-4 h-4" />
-						<span class="font-medium">We Will Reach Out To You, Shortly!</span>
-					</Alert>
-				</div>
-			{/if}
+	{#if status}
+		<div class="absolute md:inset-x-[162px]">
+			<Alert color="green" class="mt-10" dismissable>
+				<InfoCircleSolid slot="icon" class="w-4 h-4" />
+				<span class="font-medium">We Will Reach Out To You, Shortly!</span>
+			</Alert>
+		</div>
+	{/if}
 
-			<div
-				class="contact-form mt-[6rem] flex flex-col lg:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 rounded-xl bg-light-cardBgColor/15 hover:bg-light-cardBgColor/30 backdrop-blur-md shadow-2xl shadow-light-accent/10 hover:shadow-light-accent/20 hover:shadow-3xl transition duration-500 ease-in-out"
-			>
-				<div class="w-full lg:w-[50%]">
-					<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
-						<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
-						<div>
-							<Label for="name" class="block mb-2 text-xl font-medium text-light-textColor/90"
-								>Name</Label
-							>
-							<Input
-								class="bg-light-background"
-								id="name"
-								type="text"
-								name="name"
-								placeholder="Name"
-								required
-							/>
-						</div>
-						<Label class="space-y-2 text-xl font-medium text-light-textColor/90">
-							<span>Email</span>
-							<Input
-								class="bg-light-background"
-								type="email"
-								name="email"
-								placeholder="name@company.com"
-								required
-							/>
-						</Label>
-						<div class="mb-6">
-							<Label for="subject" class="block mb-2 text-xl font-medium text-light-textColor/90"
-								>Subject</Label
-							>
-							<Input
-								class="bg-light-background"
-								id="subject"
-								name="_subject"
-								placeholder="Subject"
-								required
-							/>
-						</div>
-						<div>
-							<Label for="message" class="block mb-2 text-xl font-medium text-light-textColor/90"
-								>Message</Label
-							>
-							<Textarea {...textareaprops} class="bg-light-background" />
-						</div>
-						<Button type="submit" class="w-full">Send</Button>
-					</form>
+	<div
+		class="contact-form mt-[6rem] flex flex-col lg:flex-row justify-between align-bottom items-center gap-20 px-12 py-10 rounded-xl bg-light-cardBgColor/15 hover:bg-light-cardBgColor/30 backdrop-blur-md shadow-2xl shadow-light-accent/10 hover:shadow-light-accent/20 hover:shadow-3xl transition duration-500 ease-in-out"
+	>
+		<div class="w-full lg:w-[50%]">
+			<form class="flex flex-col space-y-6" on:submit|preventDefault={handleSubmit}>
+				<input type="hidden" name="access_key" value="4ac3e312-c678-411c-b1d3-494b707d5f96" />
+				<div>
+					<Label for="name" class="block mb-2 text-xl font-medium text-light-textColor/90"
+						>Name</Label
+					>
+					<Input
+						class="bg-light-background"
+						id="name"
+						type="text"
+						name="name"
+						placeholder="Name"
+						required
+					/>
 				</div>
+				<Label class="space-y-2 text-xl font-medium text-light-textColor/90">
+					<span>Email</span>
+					<Input
+						class="bg-light-background"
+						type="email"
+						name="email"
+						placeholder="name@company.com"
+						required
+					/>
+				</Label>
+				<div class="mb-6">
+					<Label for="subject" class="block mb-2 text-xl font-medium text-light-textColor/90"
+						>Subject</Label
+					>
+					<Input
+						class="bg-light-background"
+						id="subject"
+						name="_subject"
+						placeholder="Subject"
+						required
+					/>
+				</div>
+				<div>
+					<Label for="message" class="block mb-2 text-xl font-medium text-light-textColor/90"
+						>Message</Label
+					>
+					<Textarea {...textareaprops} class="bg-light-background" />
+				</div>
+				<Button type="submit" class="w-full">Send</Button>
+			</form>
+		</div>
 
-				<div class="contact-us-image h-0 w-0 hidden lg:block md:h-fit md:w-fit">
-					<img src={contactUsImage} alt="contact us illustration" />
-				</div>
-			</div>
-		{/if}
+		<div class="contact-us-image h-0 w-0 hidden lg:block md:h-fit md:w-fit">
+			<img src={contactUsImage} alt="contact us illustration" />
+		</div>
 	</div>
 </section>
 

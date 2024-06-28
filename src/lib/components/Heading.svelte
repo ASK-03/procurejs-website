@@ -1,6 +1,12 @@
 <script>
 	import TextGenerateEffect from '@/components/ui/TextGenerateEffect/TextGenerateEffect.svelte';
 
+	// gsap
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	gsap.registerPlugin(ScrollTrigger);
+
 	export let display = 'left';
 	export let heading = 'Hello World';
 	export let subHeading = 'sub';
@@ -32,6 +38,29 @@
 		wrapperStyle = `flex flex-row-reverse ${className}`;
 		divStyle = `w-[16px] h-[75px] bg-light-purple`;
 	}
+
+	// let wrapperComponent;
+	// onMount(() => {
+	// 	setTimeout(() => {
+	// 		gsap.fromTo(
+	// 			'#div',
+	// 			{
+	// 				width: () => wrapperComponent.getBoundingClientRect().width,
+	// 				duration: 0.5,
+	// 				ease: 'power1.inOut',
+	// 				scrollTrigger: {
+	// 					trigger: '#div',
+	// 					start: 'top 60%',
+	// 					end: 'bottom 60%'
+	// 					// markers: true
+	// 				}
+	// 			},
+	// 			{
+	// 				width: 16
+	// 			}
+	// 		);
+	// 	}, 100);
+	// });
 </script>
 
 <div class={wrapperStyle}>

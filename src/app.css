@@ -9,37 +9,13 @@
     font-family: montserrat, sans-serif;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     overflow-x: hidden;
     background-color: #f2f2f2;
-    /* background-image: radial-gradient(circle at 75% 50%,
-            #2158b1,
-            #2154a2,
-            #234f94,
-            #254b85,
-            #274677,
-            #26426f,
-            #263f67,
-            #253b5f,
-            #21375b,
-            #1d3358,
-            #193054,
-            #152c51); */
-}
-
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-
-/* For IE, Edge and Firefox */
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }

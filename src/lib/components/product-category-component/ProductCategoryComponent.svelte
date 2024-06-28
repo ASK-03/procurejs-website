@@ -1,10 +1,115 @@
 <script>
 	import Navbar from '@/components/Navbar.svelte';
-	import UnderConstruction from '@/static/work-in-progress.png';
 	export let metaDetails = {};
 	export let pageDetails = {};
 
+	// gsap imports
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	gsap.registerPlugin(ScrollTrigger);
+	//
+
 	const products = pageDetails?.products || [];
+
+	let navbarComponent;
+	let headingComponent;
+	let subHeadingComponent;
+	let buttonDivComponenet;
+	onMount(() => {
+		setTimeout(() => {
+			const tl = gsap.timeline();
+
+			tl.fromTo(
+				navbarComponent,
+				{
+					opacity: 0,
+					y: -100,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				}
+			);
+
+			tl.fromTo(
+				headingComponent,
+				{
+					opacity: 0,
+					y: 50,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				},
+				'-=0.2'
+			);
+
+			tl.fromTo(
+				subHeadingComponent,
+				{
+					opacity: 0,
+					y: 50,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				},
+				'-=0.2'
+			);
+
+			tl.fromTo(
+				buttonDivComponenet,
+				{
+					opacity: 0,
+					x: -50,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				},
+				{
+					opacity: 1,
+					x: 0,
+					duration: 0.5,
+					ease: 'power1.inOut'
+				}
+			);
+
+			const gridItems = gsap.utils.toArray('.bento-grid-item');
+
+			gridItems.forEach((item, index) => {
+				tl.fromTo(
+					item,
+					{
+						opacity: 0,
+						x: -50,
+						duration: 0.5,
+						ease: 'power1.inOut'
+					},
+					{
+						opacity: 1,
+						x: 0,
+						duration: 0.5,
+						ease: 'power1.inOut'
+					},
+					'-=0.2'
+				);
+			});
+
+			tl.play();
+		}, 100);
+	});
 </script>
 
 <svelte:head>
@@ -14,7 +119,7 @@
 </svelte:head>
 
 <section class="pt-[16px] pb-[32px]">
-	<div class="mt-6 z-10">
+	<div bind:this={navbarComponent} class="opacity-0 mt-6 z-10">
 		<Navbar />
 	</div>
 
@@ -24,20 +129,26 @@
 		<div
 			class="left__section mx-auto w-full h-full flex-col items-center align-middle justify-center"
 		>
-			<h2 class="text-4xl font-bold text-center md:text-6xl text-light-textColor md:text-nowrap">
+			<h2
+				bind:this={headingComponent}
+				class="opacity-0 text-4xl font-bold text-center md:text-6xl text-light-textColor md:text-nowrap"
+			>
 				{pageDetails?.pageHeading}
 			</h2>
-			<p class="mt-4 w-full md:w-[70%] mx-auto text-xl text-center text-light-textColor/85">
+			<p
+				bind:this={subHeadingComponent}
+				class="opacity-0 mt-4 w-full md:w-[70%] mx-auto text-xl text-center text-light-textColor/85"
+			>
 				{pageDetails?.pageSubHeading}
 			</p>
-			<div class="cta mt-10 flex-col w-[50%] xs:w-fit mx-auto">
-				<a href="/#contact">
+			<div bind:this={buttonDivComponenet} class="cta mt-10 flex-col w-[50%] xs:w-fit mx-auto">
+				<a id="get-quotes" href="/#contact">
 					<button
 						class="left-cta btn w-full xs:w-fit mx-auto md:mx-2 px-10 py-4 bg-light-cardBgColor text-light-background rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:border hover:border-light-purple/80 hover:text-light-purple/80 hover:scale-105"
 						>Get Quotes</button
 					>
 				</a>
-				<a href="/#products">
+				<a id="see-products" href="/#products">
 					<button
 						class="right-cta btn my-2 w-full xs:w-fit md:mx-2 px-5 xs:px-10 py-4 bg-transparent border border-light-cardBgColor text-light-cardBgColor rounded-lg transition duration-300 ease-in-out hover:bg-light-purple/80 hover:scale-105 hover:text-light-background hover:border-transparent"
 						>See more products</button

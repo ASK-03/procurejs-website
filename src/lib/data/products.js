@@ -2,15 +2,11 @@ import FurnitureImage from '@/static/couch.jpg';
 import DecorImage from '@/static/decor.jpg';
 import JeweleryImage from '@/static/jewelery.jpg';
 import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
-// import TextilesImage from '@/static/textiles.jpg';
 import BabyProductsImage from '@/static/baby-products.jpg';
 import RugsAndCarpetsImage from '@/static/rugs-and-carpets.jpg';
-// import GardenProductsImage from '@/static/garden-products.jpg';
 import SelfcareProductsImage from '@/static/selfcare-products.jpg';
 import PetSuppliesImage from '@/static/pet-supplies.jpg';
-import HardGoodsImage from '@/static/hard-goods.jpg';
-// import ArtAndStationaryImage from '@/static/art-and-stationary.jpg';
-// import LampsImage from '@/static/lamps.jpg';
+import KitchenEssentials from '@/static/products/kitchen-essentials/1.jpeg';
 
 const products = [
 	{
@@ -23,7 +19,7 @@ const products = [
 		name: 'Kitchen Essentials',
 		help: 'Must-have items for every kitchen',
 		link: '/kitchen-essentials',
-		thumbnail: HardGoodsImage
+		thumbnail: KitchenEssentials
 	},
 	{
 		name: 'Fashion Wear',

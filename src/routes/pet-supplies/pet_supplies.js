@@ -1,8 +1,3 @@
-import FurnitureImage from '@/static/couch.jpg';
-import DecorImage from '@/static/decor.jpg';
-import JeweleryImage from '@/static/jewelery.jpg';
-import ApparelsAndSportsWearImage from '@/static/apparels.jpg';
-
 import Image1 from '@/static/products/pet-supplies/1.jpeg';
 import Image2 from '@/static/products/pet-supplies/2.jpeg';
 import Image3 from '@/static/products/pet-supplies/3.jpeg';

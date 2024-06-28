@@ -1,11 +1,10 @@
 <script>
 	import Heading from '@/components/Heading.svelte';
-	import ProductCard from '../lib/components/ProductCard.svelte';
-	import products from '@/data/products.js';
+	import ProductCard from '@/components/ProductCard.svelte';
 </script>
 
 <!-- bg-[#2A4064] -->
-<section class="products pt-[48px] pb-[32px]" id="products">
+<section id="products" class="products pt-[48px] pb-[32px]">
 	<Heading
 		display="left"
 		heading="Products"
@@ -15,5 +14,5 @@
 		className=""
 	/>
 
-	<ProductCard {products} />
+	<ProductCard />
 </section>

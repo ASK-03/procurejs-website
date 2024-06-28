@@ -1,5 +1,5 @@
 <script>
-	import { Footer, FooterCopyright, FooterLinkGroup, FooterLink, Img } from 'flowbite-svelte';
+	import { FooterCopyright, Img } from 'flowbite-svelte';
 	import logo from '@/static/procurejs-logo.png';
 	import InstagramLogo from '@/static/instagram.svg';
 	import LinkedinLogo from '@/static/linkedin.svg';

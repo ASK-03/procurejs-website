@@ -20,8 +20,6 @@
 	});
 </script>
 
-<!-- <Loader /> -->
-
 {#if isLoading}
 	<Loader />
 {:else}
