@@ -37,6 +37,8 @@
 			// 	}
 			// );
 
+			// TODO: fix the animation of navbar
+
 			tl.fromTo(
 				headingComponent,
 				{
@@ -123,7 +125,9 @@
 	<!-- <div bind:this={navbarComponent} class="mt-6 z-10">
 		<Navbar />
 	</div> -->
-	<Navbar />
+	<div class="mt-6 z-10">
+		<Navbar />
+	</div>
 
 	<div
 		class="container mx-auto w-full mt-[5vh] flex-col gap-10 lg:gap-16 md:flex items-center align-middle"
