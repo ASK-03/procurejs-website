@@ -20,21 +20,22 @@
 		setTimeout(() => {
 			const tl = gsap.timeline();
 
-			tl.fromTo(
-				navbarComponent,
-				{
-					opacity: 0,
-					y: -100,
-					duration: 0.5,
-					ease: 'power1.inOut'
-				},
-				{
-					opacity: 1,
-					y: 0,
-					duration: 0.5,
-					ease: 'power1.inOut'
-				}
-			);
+			// tl.fromTo(
+			// 	navbarComponent,
+			// 	{
+			// 		opacity: 0,
+			// 		y: -100,
+			// 		duration: 0.5,
+			// 		ease: 'power1.inOut'
+			// 	},
+			// 	{
+			// 		opacity: 1,
+			// 		y: 0,
+			// 		z: 10,
+			// 		duration: 0.5,
+			// 		ease: 'power1.inOut'
+			// 	}
+			// );
 
 			tl.fromTo(
 				headingComponent,
@@ -119,9 +120,10 @@
 </svelte:head>
 
 <section class="pt-[16px] pb-[32px]">
-	<div bind:this={navbarComponent} class="opacity-0 mt-6 z-10">
+	<!-- <div bind:this={navbarComponent} class="mt-6 z-10">
 		<Navbar />
-	</div>
+	</div> -->
+	<Navbar />
 
 	<div
 		class="container mx-auto w-full mt-[5vh] flex-col gap-10 lg:gap-16 md:flex items-center align-middle"
@@ -141,7 +143,10 @@
 			>
 				{pageDetails?.pageSubHeading}
 			</p>
-			<div bind:this={buttonDivComponenet} class="cta mt-10 flex-col w-[50%] xs:w-fit mx-auto">
+			<div
+				bind:this={buttonDivComponenet}
+				class="cta mt-10 flex-col w-[50%] xs:w-fit mx-auto"
+			>
 				<a id="get-quotes" href="/#contact">
 					<button
 						class="left-cta btn w-full xs:w-fit mx-auto md:mx-2 px-10 py-4 bg-light-cardBgColor text-light-background rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:border hover:border-light-purple/80 hover:text-light-purple/80 hover:scale-105"
